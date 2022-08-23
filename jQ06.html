@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <script src= "https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>jQuery 06</title>
+    <style>
+        div{
+            position: relative;
+            width: 200px;
+            height: 100px;
+            border: 1px solid black;
+            background-color: red;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("#moveLeft").click(function(){
+                $("div").animate({
+                    left:"0"
+                }, 1000)
+            });
+            $("#moveRight").click(function(){
+                var left = window.innerWidth - $("div").width();
+                $("div").animate({
+                    left:left
+                }, 1000)
+            });
+            $("#moveUp").click(function(){
+                $("div").animate({
+                    top:"0"
+                }, 1000)
+            });
+            $("#moveDown").click(function(){
+                var top = window.innerWidth - $("div").height();
+                $("div").animate({
+                    top:top
+                }, 1000)
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <div></div>
+    <button id="moveLeft">Move left</button>
+    <button id="moveRight">Move right</button>
+    <button id="moveUp">Move up</button>
+    <button id="moveDown">Move down</button>
+</body>
+</html>

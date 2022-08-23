@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Form đăng ký</title>
+    <script>
+        function Dangky()
+        {
+            var ten = document.forms.reg["txtTen"].value;
+            var mk = document.forms.reg["txtPass"].value;
+            var ns = document.forms.reg["txtNgaysinh"].value;
+            var gt = document.forms.reg["gt"].value;
+            var qt = document.forms.reg["qt"].value;
+            document.forms.reg["info"].value = "Chào mừng " + ten +
+            "\nBạn là " + gt + "\nMật khẩu của bạn có " + mk.length + " ký tự\n" +
+            "bạn sinh ngày " + ms + "\nVấn đề bạn quan tâm là: " + qt;
+            return false;
+        }
+    </script> 
+</head>
+
+<body>
+    <form id="reg" onsubmit="return Dangky()">
+        <table border="1px solid black" border-collapse="collapse">
+            <caption>ĐĂNG KÝ THÀNH VIÊN</caption>
+            <tr>
+                <td>Tên đăng nhập</td>
+                <td><input type="text" name="txtTen" required></td>
+            </tr>
+            <tr>
+                <td>Mật khẩu</td>
+                <td><input type="password" name="txtPass" required></td>
+            </tr>
+            <tr>
+                <td>Ngày sinh</td>
+                <td><input type="date" name="txtNgaysinh" required></td>
+            </tr>
+            <tr>
+                <td>Giới tính</td>
+                <td>
+                    <input type="radio" name="gt" value="Nam" checked>Nam
+                    <input type="radio" name="gt" value="Nữ">Nữ
+                </td>
+            </tr>
+            <tr>
+                <td>Vấn đề bạn quan tâm</td>
+                <td>
+                        <select name="qt">
+                        <option value="Kinh tế">Kinh tế</option>
+                        <option value="Thể thao">Thể thao</option>
+                        <option value="Văn học nghệ thuật">Văn học nghệ thuật</option>
+                </select>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Đăng ký"></td>
+                <td><input type="reset" value="Hủy"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <textarea name="info" rows="6" cols="50"></textarea>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

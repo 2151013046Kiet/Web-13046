@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="UTF-8">
+        <title>JavaScript 4</title>
+        <script>
+            function tinhToan()
+            {
+                var a = parseInt(document.form["myform"]["num1"].value);
+                var b = parseInt(document.form["myform"]["num2"].value);
+                var op = document.form["myform"]["op"].value;
+                var kq;
+                switch(op)
+                {
+                    case "+":
+                        kq = a + b;
+                        break;
+                    case "-":
+                        kq = a - b;
+                        break;
+                    case "*":
+                        kq = a * b;
+                        break;
+                    case "/":
+                        if(b!=0)
+                            kq=(a/b).toFixed(2);
+                        else
+                            kq = "Lỗi phép chia cho 0!"
+                        break;
+                }
+                document.form["myform"]["result"].value = kq;
+                return false;
+            }
+        </script>
+    </head>
+    <body style="text-align:center;">
+        <p><h2>CÁC PHÉP TOÁN SỐ HỌC</h2></p>
+        <form id="myform">
+            <table>
+                <tr>
+                    <td>Số thứ 1</td>
+                    <td>
+                        <input type="text" name="num1">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Số thứ 2</td>
+                    <td>
+                        <input type="text" name="num1">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Chọn phép toán</td>
+                    <td>
+                        <input type="radio" name="option" value="+">Cộng
+                        <input type="radio" name="option" value="-">Trừ
+                        <input type="radio" name="option" value="*">Nhân
+                        <input type="radio" name="option" value="/" checked>Chia
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" name="tinhToan" value="Thực hiện">
+                        <input type="reset" value="Huỷ">
+                    </td>
+                    <td><input type="text" name="result" readonly></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <script src= "https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>jQuery 04</title>
+    <script>
+        $(document).ready(function(){
+            $("div div").click(function(){
+                var color = $(this).css("background-color");
+                var name;
+                switch(color){
+                    case "rgb(0, 0, 0)": name = "Đen"; break;
+                    case "rgb(255, 0, 0)": name = "Đỏ"; break;
+                    case "rgb(255, 100, 0)": name = "Cam"; break;
+                    case "rgb(0, 255, 0)": name = "Xanh lá"; break;
+                    case "rgb(0, 255, 255)": name = "Xanh da trời"; break;
+                    case "rgb(0, 0, 255)": name = "Xanh dương"; break;
+                    case "rgb(255, 0, 255)": name = "Hồng"; break;
+                }
+                $("#result").html("Màu bạn chọn là " + name + ": " + color);
+                $("#result").css({'color': color, 'font-weight': 'bold'})
+                $("#frame").css("background-color", color);
+            })
+        })
+    </script>
+    <style>
+        div div{
+            width: 50px;
+            height: 50px;
+            margin: 5px;
+            float: left;
+        }
+        #result{
+            clear: left;
+            width: 500px;
+            height: 30px;
+        }
+        #frame{
+            width: 300px;
+            height: 200px;
+            border: 5px solid gray;
+        }
+    </style>
+</head>
+<body>
+    <p>Click lên các hình vuông</p>
+    <div >
+            <div style="background-color: rgb(0, 0, 0);"></div>
+            <div style="background-color: rgb(255, 0, 0);"></div>
+            <div style="background-color: rgb(255, 100, 0);"></div>
+            <div style="background-color: rgb(0, 255, 0);"></div>
+            <div style="background-color: rgb(0, 255, 255);"></div>
+            <div style="background-color: rgb(0, 0, 255);"></div>
+            <div style="background-color: rgb(255, 0, 255);"></div>
+    </div>
+    <br>
+    <div id="result"></div>
+    <p id="frame"></p>
+</body>
+</html>
