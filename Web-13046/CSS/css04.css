@@ -1,0 +1,11 @@
+@charset "utf-8";
+body{
+    font-family: sans-serif;
+}
+.caption{
+    font-size:  25px;
+}
+.tr{
+    color: white;
+    font-size: medium;
+}

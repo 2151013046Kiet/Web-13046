@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Untitled Document</title>
+        <script src="JS/js02_1.js"></script>
+    </head>
+    <body>
+        <script>
+            let month = Number(prompt("Nhập tháng"));
+            let year = Number(prompt("Nhập năm", 2000));
+            let days = Tinhngay(month, year);
+            document.writeln("<h2>Tháng " + month + " năm " + year + " có " + days + " ngày</h2>")
+        </script>
+        <h3 id="date"></h3>
+        <h3 id="time"></h3>
+        <button onclick="showDate()">Xem ngày giờ</button>
+    </body>
+</html>

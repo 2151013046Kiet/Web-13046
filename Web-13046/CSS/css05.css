@@ -1,0 +1,62 @@
+.banner{
+    height: 100px;
+    width: 100%;
+    animation: banner 4s infinite;
+    text-align: center;
+    line-height: 100px;
+    font-weight: 900;
+    color: white;
+}   
+@keyframes banner {
+    0% {background-color: red; font-size: 1em;}
+    20%{background-color: yellow; font-size: 1.2em;}
+    40%{background-color: blue; font-size: 1,4em;}
+    60%{background-color: green; font-size: 1.6em;}
+    80%{background-color: rgb( 255, 0, 187); font-size: 1.8em;}
+    100%{background-color: rgb(0, 174, 255); font-size: 2.0em;}
+}
+.container{
+    display: flex;
+    justify-content: center;
+}
+.container>div{
+    width: 200px;
+    height: 200px;
+    background-color: aquamarine;
+    font-size: 2em;
+    text-align: center;
+    line-height: 200px;
+    margin: 50px;
+}
+@keyframes slider {
+    0%{background-image:url(../Images/1.jpg);}
+    20%{background-image:url(../Images/2.jpg);}
+    40%{background-image:url(../Images/3.jpg);}
+    60%{background-image:url(../Images/4.jpg);}
+    80%{background-image:url(../Images/pointlobos.jpg);}
+    100%{background-image:url(../Images/flame.jpg);}
+}
+.div1{
+    animation: slider 10s infinite;
+    border: 3px solid red;
+}
+@keyframes rotate {
+    0%{transform: rotate(60deg);}
+    20%{transform: rotate(120deg);}
+    40%{transform: rotate(180deg);}
+    60%{transform: rotate(240deg);}
+    80%{transform: rotate(300deg);}
+    100%{transform: rotate(360deg);}
+}
+.div4{
+    font-size: xx-small;
+    animation: rotate 10s infinite;
+}
+.div2{
+    border-radius: 0px 30px;
+    border: 3px dashed red;
+}
+.div3{
+    border-radius: 30px 0px;
+    border: 5px dotted blue;
+}
